@@ -23,4 +23,8 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
 # and install node
 RUN apt-get install nodejs
 RUN apt-get install gcc g++ make
-RUN npm install -g  create-react-app
+#install maven
+RUN apt-get -y install wget
+RUN wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+RUN mkdir /opt/maven
+RUN tar -zxvf apache-maven-3.6.2-bin.tar.gz -C /opt/maven --strip-components=1
