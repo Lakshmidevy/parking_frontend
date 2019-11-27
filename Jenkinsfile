@@ -17,7 +17,7 @@ pipeline {
 
              sh 'npm install' 
 			 sh 'npm run build' 
-			 sh 'cp -r $WORKSPACE/build /usr/local/tomcat/webapps'
+			 sh 'cp -r $WORKSPACE/build /var/workspace'
               } 
             } 
 
